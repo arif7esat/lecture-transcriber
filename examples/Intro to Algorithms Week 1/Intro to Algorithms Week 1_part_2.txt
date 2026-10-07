@@ -1,0 +1,11 @@
+# Intro to Algorithms Week 1 | Part 2/2 | Words 121–259 of 259
+
+## Context from the previous part (~27 words, already covered — do not repeat)
+
+Now, let's look at searching. Linear search checks the elements one by one. In the worst case it looks at all n elements, so it is O(n).
+
+## This part
+
+Binary search is different. It only works on a sorted array. You look at the middle element. If the target is smaller, you continue in the left half. If it is larger, you continue in the right half. Every step throws away half of the remaining elements. So after k steps there are n divided by two to the k elements left. That gives us O(log n), which is dramatically faster for large inputs. For a million elements, linear search may need a million comparisons. Binary search needs about twenty. Is that clear? Good. One common mistake is to forget that the array must be sorted. If it is not sorted, binary search gives wrong answers, not just slow answers.
+
+Next week we will look at sorting algorithms, starting with merge sort. Please read chapter two before the lecture.

@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.venv/
+venv/
+
+# Your own data — never commit recordings or transcripts
+*.mp3
+*.m4a
+*.wav
+*.ogg
+*.flac
+*.aac
+*.webm
+*.mp4
+*.mov
+*.mkv
+*.avi
+transcripts/
+transcripts_*.zip
