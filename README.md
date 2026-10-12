@@ -44,6 +44,7 @@ Google Drive folder                         Same folder, after one run
 - **🔤 Domain hotwords** — give each course its own term list (e.g. *"Fourier transform, Laplace, convolution"*); it is applied to the *whole* recording, not just the first 30 seconds.
 - **🧹 Hallucination filter** — drops Whisper's classic phantom lines ("Thanks for watching!") and repeated-sentence loops.
 - **📁 Any structure** — sub-folders, shortcuts, shared drives, `.mp3 .m4a .wav .mp4 .mov .mkv …` (video works too).
+- **🎧 Meeting recorder for macOS** — double-click to record any call (Meet, Zoom, Teams, WhatsApp …): what you hear + your mic, one file, ready to transcribe. [More ↓](#record-your-meetings-macos)
 - **🛠️ Works on today's Colab** — includes the fix for Colab's 2026 move to CUDA 13 (`libcublas.so.12 is not found`).
 
 ## Quick start (5 minutes)
@@ -109,6 +110,18 @@ The chunker also runs locally on any `.txt`, using only the Python standard libr
 python transcribe.py split "Lecture 01.txt" "Lecture 02.txt" --words 1800 --overlap 120
 ```
 
+## Record your meetings (macOS)
+
+Transcribing meetings, not lectures? The repository includes a small recorder that captures **everyone else**
+(the Mac's audio output) and **you** (the microphone) into one `.m4a`:
+
+1. Double-click **`Record Meeting.command`**, type a name, allow Microphone and Screen & System Audio Recording the first time.
+2. Join your call in any app. Press **q** when it ends.
+3. Drop `~/Meetings/<date>_<name>.m4a` into your Drive folder and run the notebook.
+
+No virtual audio driver and no audio settings to change — your speakers and volume keys keep working. Needs macOS 13+,
+Apple's Command Line Tools and ffmpeg. Full guide: **[docs/MEETING_RECORDER.md](docs/MEETING_RECORDER.md)**.
+
 ## Documentation
 
 | | |
@@ -117,6 +130,7 @@ python transcribe.py split "Lecture 01.txt" "Lecture 02.txt" --words 1800 --over
 | ⚙️ [Configuration](docs/CONFIGURATION.md) | Every setting: language, model, hotwords, chunk size, … |
 | 🔬 [How it works](docs/HOW_IT_WORKS.md) | The pipeline and the reasoning behind each design decision |
 | 🧯 [Troubleshooting](docs/TROUBLESHOOTING.md) | Every error and warning you might see, and what to do |
+| 🎧 [Meeting recorder](docs/MEETING_RECORDER.md) | Record calls on macOS (system audio + mic), then transcribe them |
 | 🧠 [Study-notes prompt](prompts/study_notes.md) | Turn the chunks into structured notes with any LLM |
 
 ## FAQ

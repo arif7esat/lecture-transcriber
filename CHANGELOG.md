@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.1.0 — 2026-10
+
+- **Meeting recorder for macOS** (`Record Meeting.command`, `recorder/`): records system audio via ScreenCaptureKit and
+  the microphone via AVAudioEngine into separate, timestamp-aligned tracks, then levels (`dynaudnorm`), mixes and
+  limits them into one mono `.m4a` ready for the notebook. No BlackHole / Multi-Output Device needed; the output
+  device and volume keys are left alone. Built automatically on first run.
+- Health checks: warns within 3 seconds if the microphone delivers only silence (missing permission), and reports
+  peak levels and filled gaps per track after each recording.
+- New guide: [docs/MEETING_RECORDER.md](docs/MEETING_RECORDER.md), including how to verify a pre-built ffmpeg when
+  Homebrew cannot install one.
+
 ## 1.0.0 — 2026-10
 
 First public release.
