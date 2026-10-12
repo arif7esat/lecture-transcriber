@@ -50,7 +50,8 @@ ACCURACY
 - Never invent. If an owner or due date was not said, write "—". Do not guess who "I" is.
 - Fix an obviously misheard term only when certain; otherwise keep it and add [?].
 - Keep numbers, dates and names exactly as said.
-- Write in the language of the transcript.
+- Write everything in the language of the transcript, including the headings and table
+  columns of the template below (e.g. Turkish: "Kısaca", "Kararlar", "Yapılacaklar", "Ne/Kim/Ne zaman").
 
 FORMAT (Markdown). Omit any section that would be empty. Total length: as short as the
 content allows — a 1-hour meeting usually fits in one screen.
