@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- `prompts/meeting_notes.md`: meeting-notes prompt with explicit importance tests (decision, action, needed later,
+  open issue, opportunity), so the notes stay short instead of summarizing everything.
+- `.claude/skills/meeting-notes`: Claude Code skill that runs the prompt over each transcript in a subagent and saves
+  `<name>_notes.md` next to it, keeping long transcripts out of the main conversation.
+
 ## 1.1.0 — 2026-10
 
 - **Meeting recorder for macOS** (`Record Meeting.command`, `recorder/`): records system audio via ScreenCaptureKit and

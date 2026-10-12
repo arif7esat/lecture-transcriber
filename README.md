@@ -101,7 +101,9 @@ Each part starts with a header, then the overlap from the previous part, clearly
 
 That layout lets you feed parts one by one to ChatGPT, Claude, Gemini, Copilot or a local model without losing
 the thread between them — and without the model summarizing the same sentences twice.
-A ready-to-use prompt for study notes is in **[prompts/study_notes.md](prompts/study_notes.md)**.
+A ready-to-use prompt for study notes is in **[prompts/study_notes.md](prompts/study_notes.md)**, and one for meetings in **[prompts/meeting_notes.md](prompts/meeting_notes.md)** — it keeps only decisions, action items, key facts, opportunities and open questions.
+Using Claude Code? Ask it for "meeting notes" in this repo: the `meeting-notes` skill reads each transcript in a subagent
+and writes `<name>_notes.md` next to it.
 
 ## Split transcripts you already have (no GPU)
 
@@ -133,6 +135,7 @@ Apple's Command Line Tools and ffmpeg. Full guide: **[docs/MEETING_RECORDER.md](
 | 🧯 [Troubleshooting](docs/TROUBLESHOOTING.md) | Every error and warning you might see, and what to do |
 | 🎧 [Meeting recorder](docs/MEETING_RECORDER.md) | Record calls on macOS (system audio + mic), then transcribe them |
 | 🧠 [Study-notes prompt](prompts/study_notes.md) | Turn the chunks into structured notes with any LLM |
+| 📝 [Meeting-notes prompt](prompts/meeting_notes.md) | Decisions, action items and key facts from a meeting transcript |
 
 ## FAQ
 
