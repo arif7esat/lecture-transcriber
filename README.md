@@ -54,7 +54,8 @@ Google Drive folder                         Same folder, after one run
 1. Put your recordings in a Google Drive folder and copy the folder's link.
 2. Click **Open in Colab** above.
 3. **Runtime → Change runtime type → T4 GPU → Save.**
-4. Paste the link into `DRIVE_FOLDER_LINK` at the top of the cell (optionally set `LANGUAGE = "en"`).
+4. Click 🔑 **Secrets** in the left sidebar → *Add new secret* → name `DRIVE_FOLDER_LINK`, value = your link → turn on *Notebook access*.
+   It is stored in your Google account, not in the notebook, and reused next time. (Or paste the link into `DRIVE_FOLDER_LINK` in the cell.) Optionally set `LANGUAGE = "en"`.
 5. **Runtime → Run all.** Sign in when asked and tick **all** permission boxes.
 
 That's it. Transcripts appear in a `transcripts/` folder inside your Drive folder, one recording at a time.
@@ -136,6 +137,10 @@ Apple's Command Line Tools and ffmpeg. Full guide: **[docs/MEETING_RECORDER.md](
 ## FAQ
 
 **Is it really free?** Yes. It uses Colab's free GPU tier and open-source models. Colab Pro only makes it faster/longer.
+
+**Why does it ask for Google permissions every time?** Google requires your consent once per Colab session before
+code can access your Drive; it cannot be turned off from the notebook. Re-running in the same session does not ask again.
+Tick **all** boxes — a missing one makes the sign-in fail and the window come back.
 
 **Who can see my recordings?** Only your Google account. The notebook reads your folder through Google's official Drive API with *your* sign-in; you don't need to share the folder publicly. The model is downloaded from Hugging Face; no audio is sent anywhere.
 
