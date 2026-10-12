@@ -17,5 +17,9 @@ venv/
 *.mov
 *.mkv
 *.avi
+*.caf
 transcripts/
 transcripts_*.zip
+
+# Meeting recorder build output
+recorder/bin/
